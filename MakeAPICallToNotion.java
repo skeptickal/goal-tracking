@@ -3,7 +3,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 public class MakeAPICallToNotion { 
-    private static final String NOTION_API_KEY = "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"; // Replace with your API key
+    private static final String NOTION_API_KEY = System.getenv(NOTION_API_KEY); // Replace with your API key
     private static final String PARENT_PAGE_ID = "7b562caa3b6a4cb88d08f30969cc6a92"; // Replace with your Notion page ID 7b562caa-3b6a-4cb8-8d08-f30969cc6a92 521fc223-8d87-40ed-bfa7-9accdcaa6252
     private static final String NOTION_API_URL = "https://api.notion.com/v1/pages"; // https://www.notion.so/7b562caa3b6a4cb88d08f30969cc6a92?v=521fc2238d8740edbfa79accdcaa6252&pvs=4
 
