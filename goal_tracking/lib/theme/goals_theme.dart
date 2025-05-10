@@ -5,5 +5,5 @@ class GoalsTheme {
 
   static const Color white = Colors.white;
   static const Color black = Colors.black;
-  static const Color primary = Color.fromARGB(255, 73, 73, 73);
+  static const Color primary = Color(0xFF0F188D);
 }

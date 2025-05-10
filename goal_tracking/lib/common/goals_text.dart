@@ -61,7 +61,7 @@ class GoalsText extends StatelessWidget {
     this.overflow,
     this.maxLines,
     this.softWrap = true,
-    this.fontSize = 12,
+    this.fontSize = 18,
     this.bold = true,
   });
 
@@ -74,7 +74,7 @@ class GoalsText extends StatelessWidget {
     this.overflow,
     this.maxLines,
     this.softWrap = true,
-    this.fontSize = 18,
+    this.fontSize = 32,
     this.bold = true,
   });
 
@@ -87,7 +87,7 @@ class GoalsText extends StatelessWidget {
     this.overflow,
     this.maxLines,
     this.softWrap = true,
-    this.fontSize = 24,
+    this.fontSize = 48,
     this.bold = true,
   });
 
