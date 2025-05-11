@@ -12,13 +12,13 @@ class GoalsScreenWrapper extends StatelessWidget {
   final bool fixedBottom;
   final RefreshCallback? onRefresh;
   final String? headerText;
-  final String? introText;
+  final dynamic introText;
 
   const GoalsScreenWrapper({
     super.key,
     this.title,
     this.hasAppBar = false,
-    this.contentPadding = const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+    this.contentPadding = const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
     required this.builder,
     this.bottom,
     this.fixedBottom = false,
@@ -68,19 +68,20 @@ class GoalsScreenWrapper extends StatelessWidget {
                     ),
                   ),
                 ),
-              if (introText != null)
+              if (introText != null && introText is String)
                 Center(
                   child: Padding(
                     padding: EdgeInsets.only(bottom: 16),
-                    child: GoalsText.bodyLarge(text: introText!),
+                    child: GoalsText.bodyMedium(text: introText!),
                   ),
                 ),
+              if (introText != null && introText is Widget) introText,
               Builder(builder: builder),
             ],
           ),
         ),
       ),
-      if (bottom != null && fixedBottom)
+      if (bottom != null && !fixedBottom)
         SliverFillRemaining(
             fillOverscroll: true,
             hasScrollBody: false,
